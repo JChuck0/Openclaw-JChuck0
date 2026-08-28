@@ -47,6 +47,9 @@ Memory is limited. "Mental notes" don't survive session restarts; files do. Befo
 - Before changing config or schedulers (crontab, systemd units, nginx configs, shell rc files), inspect existing state first and preserve/merge by default.
 - Prefer `trash` over `rm` - recoverable beats gone forever.
 - When in doubt, ask.
+- When connecting to a new API, always store the key in .env and reference it as ${VARIABLE} — never hardcode it directly in a config or skill file.
+- If, while executing a skill, you reach the step of accessing an API key and find it hardcoded instead of referenced via ${VARIABLE} -> .env, stop before using it and notify me: "La API key de {nombre de API} está expuesta en {skill/archivo}."
+
 
 ## Existing Solutions Preflight
 
